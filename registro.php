@@ -42,6 +42,13 @@ include("encabezado.php")
                         </div>
 
                         <div class="row mb-3">
+                            <label class="col-sm-10">Tipo</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="tipo_calzado" class="form-control" placeholder="Introduce el tipo de calzado">
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label class="col-sm-10">Precio</label>
                             <div class="col-sm-10">
                                 <input type="text" name="precio_calzado" class="form-control" placeholder="Introduce el precio del calzado">
@@ -55,7 +62,7 @@ include("encabezado.php")
                 </div>
                 
                 <div class="col-lg-4 d-flex justify-content-center">
-                    <img src="img/zapateria.png" width="400">
+                    <img src="img/zapateria.png" width="400" height="400">
                 </div>
             </div>
         </section>

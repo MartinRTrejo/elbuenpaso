@@ -2,13 +2,15 @@
 $servidor = "localhost";
 $usuario = "root";
 $password = "";
+$base="bs_integradora";
 
 //crear una variable para la conexion
-$conn = mysqli_connect($servidor, $usuario, $password);
+$conn = mysqli_connect($servidor, $usuario, $password, $base);
 
 //probar conexion
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
+echo "Conexion realizada correctamente";
+
 ?>
