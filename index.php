@@ -34,7 +34,7 @@ include("encabezado.php")
           <h1 class="text-center text-muted"> Listado de Calzado</h1>
                 <table class="table table-hover">
                   <thead>
-                    <button class="btn btn-outline-success" type="submit">Agregar</button>
+                    <button class="btn btn-outline-success" type="submit" href="registro.php">Agregar</button>
                       <tr>
                         <th>Codigo</th>
                         <th>Descripcion</th>
@@ -44,7 +44,31 @@ include("encabezado.php")
                       </tr>
                   </thead>
 
-                  <tbody>
+                  <?php
+                    include("conexion.php");
+                    $consulta="SELECT * FROM calzado";
+                    $resultado=mysqli_query($conn,$consulta);
+                      if(mysqli_num_rows($resultado)>0)
+                      {
+                        while($fila=mysqli_fetch_assoc($resultado))
+                        {
+                          echo "<tr>";
+                          echo "<td>".$fila['id_calzado']."</td>";
+                          echo "<td>".$fila['modelo']."</td>";
+                          echo "<td>".$fila['talla']."</td>";
+                          echo "<td>".$fila['tipo']."</td>";
+                          echo "<td>".$fila['precio']."</td>";
+                          echo "</tr>";
+                        }
+                      }else
+                      {
+                        echo "Sin resultados";
+                      }
+
+                  ?>
+
+                  <!-- <tbody>
+
                         <tr>
                             <td>000001</td>
                             <td>Nike Runeer</td>
@@ -80,7 +104,7 @@ include("encabezado.php")
                             <td>850</td>
                             <td><a class="btn btn-danger" href="">eliminar</a>   <a class="btn btn-success"href="">modificar</a>  </td>
                         </tr>
-                  </tbody>
+                  </tbody> -->
                 </table>
         </div>
     </section>
