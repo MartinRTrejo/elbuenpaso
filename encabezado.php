@@ -21,8 +21,8 @@
                             <li class="nav-item"><a class="nav-link" href="venta.php">Venta de calzado</a></li>
                             <li class="nav-item"><a class="nav-link" href="registro.php">Alta de calzado</a></li>
                             <li class="nav-item"><a class="nav-link" href="empleado.php">Alta de empleado</a></li>
-                            <li class="nav-item"><a class="nav-link" href="index.php">Lista de calzado</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login.php">Cerrar Sesion</a></li>        
+                            <li class="nav-item"><a class="nav-link" href="principal.php">Lista de calzado</a></li>
+                            <li class="nav-item"><a class="nav-link" onclick="window.location.href='logout.php'">Cerrar Sesion</a></li>        
                         </u1>
                     </div> <!-- Cierre del div efecto menu -->
                 </div> <!-- Cierre del div contenedor principal -->
